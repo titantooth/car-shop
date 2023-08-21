@@ -1,7 +1,10 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
+import { SearchManufacturer } from './'
+
 
 const SearchBar = () => {
+    const [manufacturer, setManufacturer] = useState('');
     const handleSearch = () => { }
     return (
         <form
@@ -12,7 +15,11 @@ const SearchBar = () => {
         >
 
             <div className='searchbar__item'>
+                <SearchManufacturer
+                    manufacturer={manufacturer}
+                    setManufacturer={setManufacturer}
 
+                />
             </div>
         </form>
     )
